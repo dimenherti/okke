@@ -115,17 +115,10 @@ const start = async () => {
       let deskripsi = await (await client.groupMetadata(gc.id)).desc.toString()
       let groupSet = global.db.groups[gc.id]
       let prefixes = global.db.setting.multiprefix ? global.db.setting.prefix[0] : global.db.setting.onlyprefix
-      let buttons = [{
-         buttonId: `sc`,
-         buttonText: {
-                  displayText: 'SCRIPT'
-              },
-              type: 1
-            }]
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
+         pic = await Func.fetchBuffer(await client.profilePictureUrl('./media/images/default.jpg')
       }
       if (gc.action == 'promote') client.reply(gc.id, Func.texted('bold', `@${member.split`@`[0]} sekarang adalah admin 🗿`))
       if (gc.action == 'demote') client.reply(gc.id, Func.texted('bold', `@${member.split`@`[0]} yhaha di unadmin`))
@@ -145,22 +138,18 @@ const start = async () => {
             }
          }
          let txt = (groupSet.textwel != '' ? groupSet.textwel : textwel).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.welcome) client.sendButton(gc.id, txt, null, buttons, {
-                    document:true
-           }, {
-                title: 'ılılllıllılllıllıılılllıllılllıllı',
-                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/dec8b92f3dec03da50c97.jpg'),
-                fileName: '© RIKKA BOT OFFICIAL'
+         if (groupSet.welcome) client.sendMessageModify(gc.id, txt, null, {
+                title: 'ılılllıllılllıllıılılllıllılllıllı\n© RIKKA BOT OFFICIAL',
+                thumbnail: pic,
+                url: '',
                 
             })
       } else if (gc.action == 'remove') {
          let txt = (groupSet.textleft != '' ? groupSet.textleft : textleft).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.left) client.sendButton(gc.id, txt, null, buttons, {
-                    document: true
-          }, {
-                title: 'ılılllıllılllıllıılılllıllılllıllı',
+         if (groupSet.left) client.sendMessageModify(gc.id, txt, null, {
+                title: 'ılılllıllılllıllıılılllıllılllıllı\n© RIKKA BOT OFFICIAL',
                 thumbnail: pic,
-                fileName: '© RIKKA BOT OFFICIAL'
+                url: '',
          })
       }
    })
