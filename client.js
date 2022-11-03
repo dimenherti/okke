@@ -156,6 +156,8 @@ const start = async () => {
       } else if (gc.action == 'remove') {
          let txt = (groupSet.textleft != '' ? groupSet.textleft : textleft).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
          if (groupSet.left) client.sendButton(gc.id, txt, null, buttons, {
+                    document: true
+          }, {
                 title: 'ılılllıllılllıllıılılllıllılllıllı',
                 thumbnail: pic,
                 fileName: '© RIKKA BOT OFFICIAL'
