@@ -45,7 +45,7 @@ exports.run = {
             let buttons = [{
                urlButton: {
                         displayText: `OWNER`,
-                        url: `https://wa.me/62882002088799?text=sewabot+bang`
+                        url: `https://wa.me/6285807264974?text=sewabot+bang`
                      }
                   },
                   {
@@ -70,10 +70,10 @@ exports.run = {
                ]
             } else if (menuType == 2) {
                client.menu[id] = [
-                  await client.sendButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', null, button, {
+                  await client.sendButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', null, button, {
                     document: true
             }, {
-                title: 'ılılılllıılılıllllıılılllıllı\nWHATSAPP BOT OFFICIAL',
+                title: 'ılılılllıılılıllllıılılllıllı\nRIKKA BOT OFFICIAL',
                 thumbnail: await Func.fetchBuffer(global.db.setting.cover),
                 fileName: `Berjalan : ${Func.toTime(process.uptime() * 1000)}\nVersion [ 0.0.5 ]`
             }),
@@ -83,7 +83,7 @@ exports.run = {
                ]
             } else if (menuType == 3) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', buttons, {
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', buttons, {
                      document: true,
                      name: '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 𝘉𝘰𝘵'
                   }),
@@ -93,7 +93,7 @@ exports.run = {
                ]
             } else if (menuType == 4) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', buttons, {
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', buttons, {
                      location: true
                   }),
                   setTimeout(() => {
@@ -102,7 +102,7 @@ exports.run = {
                ]
             } else if (menuType == 5) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '                         Ⓟ premium | Ⓛ limit', buttons, {
+                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', buttons, {
                      gif: true
                   }),
                   setTimeout(() => {
@@ -111,14 +111,14 @@ exports.run = {
                ]
             } else if (menuType == 6) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', buttons),
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', buttons),
                   setTimeout(() => {
                      delete client.menu[id]
                   }, 180000)
                ]
             } else if (menuType == 7) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '                         Ⓟ premium | Ⓛ limit', buttons),
+                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '© Rikaa bot by Faruqofc', buttons),
                   setTimeout(() => {
                      delete client.menu[id]
                   }, 180000)
