@@ -31,7 +31,7 @@ const buttonMessage = {
          renderLargerThumbnail: false,
          showAdAttribution: true,
          title: `Script BOT? Klik ini\nAktif selama ${Func.toTime(process.uptime() * 1000)}`,
-         thumbnail: await Func.fetchBuffer('https://telegra.ph/file/ca92b83254814827207cc.jpg'),
+         thumbnail: await Func.fetchBuffer('https://telegra.ph/file/b7ad2a779a31241f0af1a.jpg'),
          sourceUrl: 'https://wa.me/6285807264974?text=script+nya+pengen+dong+bang'
       }
    }
