@@ -3,7 +3,7 @@ class NeoxrApi {
    apiKey = null
 
    constructor(apiKey) {
-      this.apiKey = apiKey || 'faruqxyz'
+      this.apiKey = apiKey || ''
    }
 
    ig = async (url) => {
