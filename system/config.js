@@ -1,12 +1,12 @@
-global.owner = '15057587466'
+global.owner = '6285807264974'
 global.max_upload = 500 // 200MB (1 = 1MB)
 global.status = {
    wait: Func.texted('bold', 'Tunggu sebentar . . .'),
    invalid: Func.texted('bold', 'Link salah kak!'),
    wrong: Func.texted('bold', 'Wrong format!'),
    getdata: Func.texted('bold', 'Tunggu beberapa detik...'),
-   fail: Func.texted('bold', 'Can\'t get metadata!'),
-   error: Func.texted('bold', 'Terjadi kesalahan!'),
+   fail: Func.texted('bold', 'Error bang!'),
+   error: Func.texted('bold', 'Error bang!'),
    autodl: Func.texted('bold', '➠ auto download file sedang dikirim...'),
    vip: Func.texted('bold', 'Fitur ini khusus untuk pengguna VIP'),
    vn: Func.texted('bold', '🤡 convert to voice...'),
