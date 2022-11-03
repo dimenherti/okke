@@ -44,7 +44,7 @@ global.store = makeInMemoryStore({
 })
 
 // Get free apikey register at https://api.neoxr.eu.org
-global.Api = new NeoxrApi('lf3YsbNU')
+global.Api = new NeoxrApi('faruqxyz')
 
 const start = async () => {
    global.client = Socket({
