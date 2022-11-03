@@ -111,7 +111,7 @@ exports.run = {
                ]
             } else if (menuType == 6) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', buttons),
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), ' © Rikaa bot by Faruqofc', buttons),
                   setTimeout(() => {
                      delete client.menu[id]
                   }, 180000)
