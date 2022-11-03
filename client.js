@@ -109,8 +109,8 @@ const start = async () => {
    client.ev.on('group-participants.update', async (gc) => {
       let meta = await (await client.groupMetadata(gc.id))
       let member = gc.participants[0]
-      let textwel = Func.texted('bold', `Selamat datang +tag digrup +grup.`)
-      let textleft = Func.texted('bold', `+tag keluar karena udah becek`)
+      let textwel = `*Selamat datang +tag digrup +grup*`
+      let textleft = `*+tag keluar karena udah becek*`
       let readmore = String.fromCharCode(8206).repeat(4001)
       let deskripsi = await (await client.groupMetadata(gc.id)).desc.toString()
       let groupSet = global.db.groups[gc.id]
@@ -153,12 +153,11 @@ const start = async () => {
             })
       } else if (gc.action == 'remove') {
          let txt = (groupSet.textleft != '' ? groupSet.textleft : textleft).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.left) client.sendButton(gc.id, txt, null, buttons, {
-                   document: true
-            }, {
+         if (groupSet.left) client.sendMessageModify(gc.id, txt, null, {
                 title: 'ılılılllıılılıllllıılılllıllı\nSayonara Beban Group',
+                largeThumb: true,
                 thumbnail: pic,
-                fileName: 'RIKKA BOT'
+                url: '',
          })
       }
    })
