@@ -1,4 +1,4 @@
-global.owner = '6285807264974'
+global.owner = '15057587466'
 global.max_upload = 500 // 200MB (1 = 1MB)
 global.status = {
    wait: Func.texted('bold', 'Tunggu sebentar . . .'),
