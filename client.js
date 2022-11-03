@@ -115,6 +115,13 @@ const start = async () => {
       let deskripsi = await (await client.groupMetadata(gc.id)).desc.toString()
       let groupSet = global.db.groups[gc.id]
       let prefixes = global.db.setting.multiprefix ? global.db.setting.prefix[0] : global.db.setting.onlyprefix
+      let buttons = [{
+         buttonId: `sc`,
+         buttonText: {
+                  displayText: 'SCRIPT'
+              },
+              type: 1
+            }]
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
@@ -138,19 +145,20 @@ const start = async () => {
             }
          }
          let txt = (groupSet.textwel != '' ? groupSet.textwel : textwel).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.welcome) client.sendMessageModify(gc.id, txt, null, {
-                title: '© RIKKA BOT OFFICIAL',
-                largeThumb: true,
+         if (groupSet.welcome) client.sendButton(gc.id, txt, null, buttons, {
+                    document:true
+           }, {
+                title: 'ılılllıllılllıllıılılllıllılllıllı',
                 thumbnail: await Func.fetchBuffer('https://telegra.ph/file/dec8b92f3dec03da50c97.jpg'),
-                url: '',
+                fileName: '© RIKKA BOT OFFICIAL'
+                
             })
       } else if (gc.action == 'remove') {
          let txt = (groupSet.textleft != '' ? groupSet.textleft : textleft).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.left) client.sendMessageModify(gc.id, txt, null, {
-                title: '© RIKKA BOT OFFICIAL',
-                largeThumb: true,
+         if (groupSet.left) client.sendButton(gc.id, txt, null, buttons, {
+                title: 'ılılllıllılllıllıılılllıllılllıllı',
                 thumbnail: pic,
-                url: '',
+                fileName: '© RIKKA BOT OFFICIAL'
          })
       }
    })
