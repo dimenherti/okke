@@ -118,7 +118,7 @@ const start = async () => {
       try {
          pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Func.fetchBuffer(await client.profilePictureUrl('./media/images/default.jpg')
+         pic = await Func.fetchBuffer('./media/images/default.jpg')
       }
       if (gc.action == 'promote') client.reply(gc.id, Func.texted('bold', `@${member.split`@`[0]} sekarang adalah admin 🗿`))
       if (gc.action == 'demote') client.reply(gc.id, Func.texted('bold', `@${member.split`@`[0]} yhaha di unadmin`))
