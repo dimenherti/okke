@@ -8,7 +8,7 @@ exports.run = {
       if (command == 'owner') {
          const contact = [{
             name: 'Anti psatir',
-            number: '6285807264974'
+            number: '15057587466'
          }]
          const msg = await client.sendContact(m.chat, contact, m)
          await client.reply(m.chat, `Chat aja gausah sungkan" bang`, msg)
