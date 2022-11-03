@@ -70,7 +70,7 @@ exports.run = {
                ]
             } else if (menuType == 2) {
                client.menu[id] = [
-                  await client.sendButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix),'© Powered RIKKA BOT', null, button, {
+                  await client.sendButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix),'© Powered By RIKKA BOT', null, button, {
                     document: true
             }, {
                 title: 'ılılılllıılılıllllıılılllıllı\nRIKKA BOT OFFICIAL',
@@ -83,7 +83,7 @@ exports.run = {
                ]
             } else if (menuType == 3) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© Powered RIKKA BOT', buttons, {
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© Powered By RIKKA BOT', buttons, {
                      document: true,
                      name: '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 𝘉𝘰𝘵'
                   }),
@@ -93,7 +93,7 @@ exports.run = {
                ]
             } else if (menuType == 4) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© Powered RIKKA BOT ', buttons, {
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© By Powered RIKKA BOT ', buttons, {
                      location: true
                   }),
                   setTimeout(() => {
@@ -102,7 +102,7 @@ exports.run = {
                ]
             } else if (menuType == 5) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '© Powered RIKKA BOT', buttons, {
+                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '© By Powered RIKKA BOT', buttons, {
                      gif: true
                   }),
                   setTimeout(() => {
@@ -111,14 +111,14 @@ exports.run = {
                ]
             } else if (menuType == 6) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© Powered RIKKA BOT', buttons),
+                  await client.sendTemplateButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '© By Powered RIKKA BOT', buttons),
                   setTimeout(() => {
                      delete client.menu[id]
                   }, 180000)
                ]
             } else if (menuType == 7) {
                client.menu[id] = [
-                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '© Powered RIKKA BOT', buttons),
+                  await client.sendTemplateButton(m.chat, await Func.fetchBuffer('./media/video/video.mp4'), await menu(m, readmore, global.db.setting, isPrefix), '© By Powered RIKKA BOT', buttons),
                   setTimeout(() => {
                      delete client.menu[id]
                   }, 180000)
