@@ -116,9 +116,9 @@ const start = async () => {
       let groupSet = global.db.groups[gc.id]
       let prefixes = global.db.setting.multiprefix ? global.db.setting.prefix[0] : global.db.setting.onlyprefix
       let buttons = [{
-         buttonId: `!000`,
+         buttonId: `.sc`,
          buttonText: {
-            displayText: 'Hai‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎ 🙏\n\nKamu member baru ya? btw mamah mu janda ga🗿'
+            displayText: '‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎SCRIPT'
          }
       }]
       try {
@@ -144,19 +144,21 @@ const start = async () => {
             }
          }
          let txt = (groupSet.textwel != '' ? groupSet.textwel : textwel).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.welcome) client.sendButton(gc.id, pic, `${txt}\n\n${readmore}${deskripsi}\n`, `${meta.subject}`, null, buttons, {
+         if (groupSet.welcome) client.sendButton(gc.id, pic, txt, null, buttons, {
                     document: true
             }, {
-                title: 'ılılılllıılılıllllıılılllıllı\nSelamat Bergabung New Member',
+                title: 'ılılılllıılılıllllıılılllıllı\nWelcome Beban Group',
                 thumbnail: await Func.fetchBuffer('https://telegra.ph/file/dec8b92f3dec03da50c97.jpg'),
-                fileName: 'Harap Baca Deskripsi'
+                fileName: 'RIKKA BOT'
             })
       } else if (gc.action == 'remove') {
          let txt = (groupSet.textleft != '' ? groupSet.textleft : textleft).replace('+tag', `@${member.split`@`[0]}`).replace('+grup', `${meta.subject}`)
-         if (groupSet.left) client.sendMessageModify(gc.id, txt, null, {
-            largeThumb: true,
-            thumbnail: pic,
-            url: 'https://chat.whatsapp.com/EARvthLENgw2yxhDUKDuMr'
+         if (groupSet.left) client.sendButton(gc.id, txt, null, buttons, {
+                   document: true
+            }, {
+                title: 'ılılılllıılılıllllıılılllıllı\nSayonara Beban Group',
+                thumbnail: pic,
+                fileName: 'RIKKA BOT'
          })
       }
    })
