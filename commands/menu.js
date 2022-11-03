@@ -73,7 +73,7 @@ exports.run = {
                   await client.sendButton(m.chat, global.db.setting.cover, await menu(m, readmore, global.db.setting, isPrefix), '                       Ⓟ premium | Ⓛ limit', null, button, {
                     document: true
             }, {
-                title: 'ılılılllıılılıllllıılılllıllı\nWHATSAPP BOT OFFICIAL',
+                title: 'ılılılllıılılıllllıılılllıllı\nRIKKA BOT OFFICIAL',
                 thumbnail: await Func.fetchBuffer(global.db.setting.cover),
                 fileName: `Berjalan : ${Func.toTime(process.uptime() * 1000)}\nVersion [ 0.0.5 ]`
             }),
