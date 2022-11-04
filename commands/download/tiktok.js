@@ -11,18 +11,18 @@ exports.run = {
       try {
          if (!args || !args[0]) return client.reply(m.chat, Func.example(isPrefix, command, 'https://vt.tiktok.com/ZSe22y3dA'), m)
          if (!args[0].match('tiktok.com')) return client.reply(m.chat, global.status.invalid, m)
-         client.sendReact(m.chat, '🕒', m.key)
+         client.sendReact(m.chat, '🚬', m.key)
          let old = new Date()
          let json = await Api.tiktok(Func.ttFixed(args[0]))
          if (!json.status) return client.reply(m.chat, Func.jsonFormat(json), m)
-         if (command == 'tiktok') return client.sendButton(m.chat, json.data.video, `If you want to get the *original sound* press the button below.\n🍟 *Fetching* : ${((new Date - old) * 1)} ms`, ``, m, [{
+         if (command == 'tiktok') return client.sendButton(m.chat, json.data.video, `Jika Anda ingin mendapatkan *Original sound* tekan tombol di bawah.\n⏰ *Kecepatan* : ${((new Date - old) * 1)} ms`, ``, m, [{
             buttonId: `${isPrefix}tikmp3 ${args[0]}`,
             buttonText: {
                displayText: 'Backsound'
             },
             type: 1
          }])
-         if (command == 'tikwm') return client.sendButton(m.chat, json.data.videoWM, `If you want to get the *original sound* press the button below.\n🍟 *Fetching* : ${((new Date - old) * 1)} ms`, ``, m, [{
+         if (command == 'tikwm') return client.sendButton(m.chat, json.data.videoWM, `.\n⏰ *Kecepatan* : ${((new Date - old) * 1)} ms`, ``, m, [{
             buttonId: `${isPrefix}tikmp3 ${args[0]}`,
             buttonText: {
                displayText: 'Backsound'
