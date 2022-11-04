@@ -12,7 +12,7 @@ exports.run = {
    }) => {
       try {
          if (!text) return client.reply(m.chat, Func.example(isPrefix, command, 'lathi'), m)
-         client.sendReact(m.chat, '🕒', m.key)
+         client.sendReact(m.chat, '⏱️', m.key)
          const search = await (await yt.searchVideo(text)).videos
          if (!search || search.length == 0) return client.reply(m.chat, global.status.fail, m)
          const json = await Func.fetchJson('https://yt.nxr.my.id/yt2?url=https://youtu.be/' + search[0].id + '&type=audio')
@@ -26,7 +26,7 @@ exports.run = {
          let chSize = Func.sizeLimit(json.data.size, global.max_upload)
          if (chSize.oversize) return client.reply(m.chat, `💀 File size (${json.data.size}) exceeds the maximum limit, download it by yourself via this link : ${await (await scrap.shorten(json.data.url)).data.url}`, m)
          client.sendMessageModify(m.chat, caption, m, {
-            title: 'Siesta - Multi Device',
+            title: 'ılılılllıılılıllllıılılllıllı\n01:43 ━●── 03:50 ⇆ ◁ㅤ ❚❚ ㅤ▷ ↻',
             largeThumb: true,
             thumbnail: await Func.fetchBuffer(json.thumbnail)
          }).then(async () => {
