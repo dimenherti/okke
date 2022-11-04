@@ -1,4 +1,3 @@
-const yt = require('usetube')
 exports.run = {
    usage: ['play'],
    hidden: ['lagu', 'song'],
